@@ -3,23 +3,36 @@ import { ClockCircleOutlined } from '@ant-design/icons';
 import { Timeline } from 'antd';
 
 const HomeTimeline: React.FC = () => (
-  <Timeline
+  <Timeline className='t-xl'
     items={[
       {
-        children: 'Create a services site 2015-09-01',
+        children: '12-12-2023 Grip Aşısı',
       },
       {
-        children: 'Solve initial network problems 2015-09-01',
+        children: '07-01-2024 Kan Testi',
       },
       {
         dot: <ClockCircleOutlined className="timeline-clock-icon" />,
-        color: 'red',
-        children: 'Technical testing 2015-09-01',
+        color: 'purple',
+        children: '08-01-2024 Doktor Randevusu',
       },
       {
-        children: 'Network problems being solved 2015-09-01',
+        children: '12-02-2024 Kan Testi Tekrar',
       },
-      
+      {
+        children: '12-03-2024 Rutin Aşı 1',
+      },
+      {
+        children: '12-03-2024 Rutin Aşı 2',
+      },
+      {
+        dot: <ClockCircleOutlined className="timeline-clock-icon" />,
+        color: 'purple',
+        children: '08-04-2024 Doktor Randevusu',
+      },
+      {
+        children: '17-05-2024 Diş Kontrolü',
+      },
     ]}
   />
 );

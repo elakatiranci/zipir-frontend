@@ -6,11 +6,10 @@ import HomeTimeline from '@/components/Timeline/HomeTimeline'
 import BaseCard from '@/components/Cards/BaseCard'
 import MainNavbar from '@/components/Navbar/MainNavbar'
 
-export default function Doctor() {
+export default function Baby() {
   return (
     <>
     <div className="container mx-auto">
-    <MainNavbar/>
       <div className="flex flex-row justify-center">
         {/* Side Menu Start */}
         <div className='basis-1/4 flex'>
@@ -18,7 +17,7 @@ export default function Doctor() {
         </div>
         {/* Side Menu End */}
         {/* Content Start */}
-        <div className='basis-2/4 w-full p-3'>
+        <div className='basis-2/4 w-full p-3'> 
           <BaseCard/>
           <BaseCard/>
           

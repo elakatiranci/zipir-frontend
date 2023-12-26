@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import {Card, CardBody, CardFooter, Image} from "@nextui-org/react";
-import { Baby, Cog, Link, LucideIcon, MessageCircleHeart, ScrollText, Search, Stethoscope, icons } from "lucide-react";
+import { Baby, Cog, Link, LucideIcon, MessageCircleHeart, MessagesSquare, ScrollText, Search, Stethoscope, icons } from "lucide-react";
 import { useRouter } from 'next/navigation';
 
 
@@ -24,7 +24,7 @@ export default function HomeMenuButton() {
           </Card>
       </div>
       <div className="w-full p-3">
-          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-pink-200 to-pink-500 text-pink-100" onPress={() => onPressProcess("/baby/[babyId]")}>
+          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-pink-200 to-pink-500 text-pink-100" onPress={() => onPressProcess("/home/baby/[babyId]")}>
             <CardBody className={"overflow-visible"}>
             <Baby />
               <b className="mt-2">Bebek</b>
@@ -32,7 +32,7 @@ export default function HomeMenuButton() {
           </Card>
       </div>
       <div className="w-full p-3">
-          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-sky-200 to-sky-500 text-sky-100" onPress={() => onPressProcess("/doctor/[doktorId]")}>
+          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-sky-200 to-sky-500 text-sky-100" onPress={() => onPressProcess("/home/doctor/[doktorId]")}>
             <CardBody className={"overflow-visible"}>
             <Stethoscope />
               <b className="mt-2">Doktor</b>
@@ -40,7 +40,7 @@ export default function HomeMenuButton() {
           </Card>
       </div>
       <div className="w-full p-3">
-          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-yellow-200 to-yellow-500 text-yellow-100" onPress={() => onPressProcess("/notepad")}>
+          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-yellow-200 to-yellow-500 text-yellow-100" onPress={() => onPressProcess("/home/notepad")}>
             <CardBody className={"overflow-visible"}>
             <ScrollText />
               <b className="mt-2">Not Defteri</b>
@@ -48,10 +48,10 @@ export default function HomeMenuButton() {
           </Card>
       </div>
       <div className="w-full p-3">
-          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-slate-300 to-slate-400 text-slate-100" >
+          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-slate-300 to-slate-400 text-slate-100" onPress={() => onPressProcess("/home/message")}>
             <CardBody className={"overflow-visible"}>
-            <Search />
-              <b className="mt-2">Arama</b>
+            <MessagesSquare />
+              <b className="mt-2">Sohbetler</b>
             </CardBody>
           </Card>
       </div>

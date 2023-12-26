@@ -5,13 +5,11 @@ import { Card, CardBody } from '@nextui-org/react'
 import HomeTimeline from '@/components/Timeline/HomeTimeline'
 import BaseCard from '@/components/Cards/BaseCard'
 import MainNavbar from '@/components/Navbar/MainNavbar'
-import MainNoteArea from '@/components/NoteArea/MainNoteArea'
 
-export default function Notepad() {
+export default function Doctor() { 
   return (
     <>
-    <div className="container mx-auto">
-    <MainNavbar/>
+    <div className="container  my-auto mx-auto">
       <div className="flex flex-row justify-center">
         {/* Side Menu Start */}
         <div className='basis-1/4 flex'>
@@ -19,7 +17,11 @@ export default function Notepad() {
         </div>
         {/* Side Menu End */}
         {/* Content Start */}
-        <div className='h-full'><MainNoteArea></MainNoteArea></div>
+        <div className='basis-2/4 w-full p-3'>
+          <BaseCard/>
+          <BaseCard/>
+          
+        </div>
         {/* Content End */}
       </div>
     </div>
