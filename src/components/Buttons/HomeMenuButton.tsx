@@ -15,7 +15,7 @@ export default function HomeMenuButton() {
   return (
     <>
     <div className="grid grid-cols-2 w-full">
-      <div className="w-full p-3">
+      <div className="w-full p-2">
           <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-purple-200 to-purple-500 text-purple-100" onPress={() => onPressProcess("/home/social")}>
             <CardBody className={"overflow-visible"} >
               <MessageCircleHeart/>
@@ -23,7 +23,7 @@ export default function HomeMenuButton() {
             </CardBody>
           </Card>
       </div>
-      <div className="w-full p-3">
+      <div className="w-full p-2">
           <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-pink-200 to-pink-500 text-pink-100" onPress={() => onPressProcess("/home/baby/[babyId]")}>
             <CardBody className={"overflow-visible"}>
             <Baby />
@@ -31,7 +31,7 @@ export default function HomeMenuButton() {
             </CardBody>
           </Card>
       </div>
-      <div className="w-full p-3">
+      <div className="w-full p-2">
           <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-sky-200 to-sky-500 text-sky-100" onPress={() => onPressProcess("/home/doctor/[doktorId]")}>
             <CardBody className={"overflow-visible"}>
             <Stethoscope />
@@ -39,7 +39,7 @@ export default function HomeMenuButton() {
             </CardBody>
           </Card>
       </div>
-      <div className="w-full p-3">
+      <div className="w-full p-2">
           <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-yellow-200 to-yellow-500 text-yellow-100" onPress={() => onPressProcess("/home/notepad")}>
             <CardBody className={"overflow-visible"}>
             <ScrollText />
@@ -47,16 +47,16 @@ export default function HomeMenuButton() {
             </CardBody>
           </Card>
       </div>
-      <div className="w-full p-3">
-          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-slate-300 to-slate-400 text-slate-100" onPress={() => onPressProcess("/home/message")}>
+      <div className="w-full p-2">
+          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-slate-300 to-green-500 text-slate-100" onPress={() => onPressProcess("/home/message")}>
             <CardBody className={"overflow-visible"}>
             <MessagesSquare />
               <b className="mt-2">Sohbetler</b>
             </CardBody>
           </Card>
       </div>
-      <div className="w-full p-3">
-          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-slate-300 to-slate-400 text-slate-100">
+      <div className="w-full p-2">
+          <Card isPressable shadow="sm" className="w-full p-3 bg-gradient-to-tl from-slate-300 to-slate-400 text-slate-100" onPress={() => onPressProcess("/home/settings")}>
             <CardBody className={"overflow-visible"}>
             <Cog />
               <b className="mt-2">Ayarlar</b>

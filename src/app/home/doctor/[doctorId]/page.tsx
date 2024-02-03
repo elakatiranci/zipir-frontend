@@ -10,17 +10,17 @@ export default function Doctor() {
   return (
     <>
     <div className="container  my-auto mx-auto">
-      <div className="flex flex-row justify-center">
+      <div className="basis-1/4 flex sticky top-20 max-h-[200px]">
         {/* Side Menu Start */}
         <div className='basis-1/4 flex'>
         <HomeMenuButton></HomeMenuButton>
         </div>
         {/* Side Menu End */}
         {/* Content Start */}
-        <div className='basis-2/4 w-full p-3'>
+        <div className='basis-2/4 w-full px-3'>
           <BaseCard/>
           <BaseCard/>
-          
+          <BaseCard/>
         </div>
         {/* Content End */}
       </div>

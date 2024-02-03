@@ -8,20 +8,20 @@ export default function BaseCard() {
   const [isFollowed, setIsFollowed] = React.useState(false);
 
   return (
-    <Card className="mt-5  max-w-[800px]">
+    <Card className="mt-3  max-w-[800px]">
       <CardHeader className="justify-between">
         <div className="flex gap-5">
-          <Avatar isBordered radius="full" size="md" src="/avatars/avatar-1.png" />
+          <Avatar isBordered radius="full" size="md" src="https://st.depositphotos.com/1258191/3501/i/450/depositphotos_35019551-stock-photo-female-doctor.jpg" />
           <div className="flex flex-col gap-1 items-start justify-center">
-            <h4 className="color-black-500 text-small font-semibold leading-none ">Neva Şanel</h4>
+            <h4 className="color-black-500  font-semibold leading-none ">Neva Şanel</h4>
             <h5 className="text-small tracking-tight text-default-400">Uzman Doktor</h5>
           </div>
         </div>
         <Button
-          className={isFollowed ? "bg-purple-500 text-white border-0" : "bg-purple-500 text-white"}
+          className={isFollowed ? "bg-purple-500 text-white border-0" : "bg-purple-700 text-white"}
           color="primary"
           radius="full"
-          size="sm"
+          size="md"
           variant={isFollowed ? "bordered" : "solid"}
           onPress={() => setIsFollowed(!isFollowed)}
         >
@@ -40,12 +40,12 @@ export default function BaseCard() {
       </CardBody>
       <CardFooter className="gap-3">
         <div className="flex gap-1">
-          <p className="font-semibold  color-black-500 text-small">4</p>
-          <p className="color-black-500 text-small"><Heart />Beğen</p>
+          <p className="font-semibold  color-black-500 text-xl">4    </p>
+          <p className="color-black-500 text-small"><Heart /></p>
         </div>
         <div className="flex gap-1">
-          <p className="font-semibold color-black-500 text-small">97.1K</p>
-          <p className="color-black-500 text-small"><MessageCircleMore />Yorum Yap</p>
+          <p className="font-semibold color-black-500 text-xl">97.1K   </p>
+          <p className="color-black-500 text-small"><MessageCircleMore /></p>
         </div>
       </CardFooter>
     </Card>

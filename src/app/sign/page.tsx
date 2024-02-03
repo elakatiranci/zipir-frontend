@@ -60,7 +60,7 @@ export default function Sign() {
                     </Link>
                   </p>
                   <div className="flex gap-2 justify-end">
-                    <Button fullWidth color="secondary">
+                    <Button as={Link} fullWidth color="secondary" href="/home/profile">
                       Sign up
                     </Button>
                   </div>

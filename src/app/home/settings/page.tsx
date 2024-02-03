@@ -5,12 +5,15 @@ import { Card, CardBody } from '@nextui-org/react'
 import HomeTimeline from '@/components/Timeline/HomeTimeline'
 import BaseCard from '@/components/Cards/BaseCard'
 import MainNavbar from '@/components/Navbar/MainNavbar'
-import MainChat from '@/components/Chat/MainChat'
+import MainNoteArea from '@/components/NoteArea/MainNoteArea'
+import MainNoteInput from '@/components/NoteArea/MainNoteInput'
+import SettingsNavbar from '@/components/SettingsNavbar/SettingsNavbar'
+import SettingsSwitch from '@/components/SettingsNavbar/SettingsSwitch'
 
-export default function Message() { 
+export default function Settings() {
   return (
     <>
-    <div className="container mx-auto">
+    <div className="container mx-auto ">
       <div className="basis-1/4 flex sticky top-20 max-h-[200px]">
         {/* Side Menu Start */}
         <div className='basis-1/4 flex'>
@@ -18,8 +21,9 @@ export default function Message() {
         </div>
         {/* Side Menu End */}
         {/* Content Start */}
-        <div className='h-full grid grid-cols-2 gap-2 px-3'>
-          <MainChat></MainChat>
+        <div className='h-full basis-2/4 gap-2 px-3'>
+        <SettingsNavbar/>
+        <SettingsSwitch></SettingsSwitch>
         </div>
         {/* Content End */}
       </div>

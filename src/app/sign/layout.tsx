@@ -20,11 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-violet-100">
-          <Providers>
-              <MainNavbar/>
+      <div className="relative bg-cover bg-center h-screen flex items-center justify-center" style={{ backgroundImage: "url('/app/sign/zipircomsign.png')" }}>
+        <Providers>
               {children}
-          </Providers>
+         </Providers>
         </div>
       </body>
     </html>

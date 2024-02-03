@@ -1,21 +1,19 @@
-import React from "react";
-import {Textarea} from "@nextui-org/react";
+"use client"
 
-export default function NoteArea() {
+import React from "react";
+import {Card, CardHeader, CardBody, CardFooter, Avatar, Button} from "@nextui-org/react";
+
+export default function MainNoteArea() {
+  const [isFollowed, setIsFollowed] = React.useState(false);
+
   return (
-    <div className="flex h-full text-2xl w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-10 font-purple-500 text-inherit  bg-color-purple-500">
-      <Textarea
-        label="Yenidoğan/Bebek/Çocuk Dönem Özellikleri"
-        placeholder="Lütfen notunuzu ekleyiniz."
-      />
-      <Textarea className=" text-purple-500"
-        label="Yenidoğan/Bebek/Çocuk Gelişim Takibi"
-        placeholder="Lütfen notunuzu ekleyiniz."
-      />
-      <Textarea
-        label="Yenidoğan/Bebek/Çocuk Hastalık Takibi"
-        placeholder="Lütfen notunuzu ekleyiniz."
-      />
-    </div>
+    <Card className="h-[330px] w-[450px] mt-2">
+      <CardBody className="px-5 py-10 text-small text-default-400">
+        <span className="pt-2">
+          <span className="py-2" aria-label="computer" role="img">
+          </span>
+        </span>
+      </CardBody>
+    </Card>
   );
 }

@@ -1,14 +1,11 @@
-import Image from 'next/image'
 
 import HomeMenuButton from '@/components/Buttons/HomeMenuButton'
-import { Card, CardBody } from '@nextui-org/react'
-import HomeTimeline from '@/components/Timeline/HomeTimeline'
-import BaseCard from '@/components/Cards/BaseCard'
+import MainSearch from '@/components/Search/MainSearch'
 
-export default function Home() {
+export default function Search() {
   return (
     <>
-    <div className="container mx-auto">
+    <div className="container mx-auto ">
       <div className="basis-1/4 flex sticky top-20 max-h-[200px]">
         {/* Side Menu Start */}
         <div className='basis-1/4 flex'>
@@ -16,10 +13,8 @@ export default function Home() {
         </div>
         {/* Side Menu End */}
         {/* Content Start */}
-        <div className='basis-2/4 w-full px-3'>
-          <BaseCard/>
-          <BaseCard/>
-          <BaseCard/>
+        <div className='h-full basis-2/4 gap-2 px-3'>
+        <MainSearch/>
         </div>
         {/* Content End */}
       </div>
@@ -27,3 +22,4 @@ export default function Home() {
     </>
   )
 }
+""
