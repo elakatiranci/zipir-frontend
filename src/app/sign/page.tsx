@@ -1,8 +1,12 @@
 "use client"
 
+
+import { redirect } from 'next/navigation'
 import React, { useState } from "react";
 import { Tabs, Tab, Input, Link, Button, Card, CardBody } from "@nextui-org/react";
 import { Baby } from "lucide-react";
+import { loginUser, signupUser } from "@/api";
+import { useRouter } from 'next/router';
 
 export default function Sign() {
   const [selectedTab, setSelectedTab] = useState("login");
@@ -14,33 +18,26 @@ export default function Sign() {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch("http://localhost:50051/user/auth", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: loginEmail, password: loginPassword }),
-      });
-      const data = await response.json();
-      console.log(data); // Sunucudan gelen yanıtı konsola yazdırabilirsiniz
-      // İşlemlere devam etmek için sunucudan gelen yanıtı burada kullanabilirsiniz
+      const data = await loginUser(loginEmail, loginPassword);
+      console.log("Logged in");
+    
+      // Assuming the login was successful and you received a token or user data
+      // Set the token/user data in a cookie
+      Cookies.set('token', data.email); // Assuming you have a token
+      
+      // Redirect user to '/dashboard'
+      window.location.href = '/home';
     } catch (error) {
+      alert('Eposta veya parola yanlis')
       console.error("There was an error!", error);
     }
   };
 
   const handleSignup = async () => {
     try {
-      const response = await fetch("http://localhost:50051/user", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name: signupName, email: signupEmail, password: signupPassword }),
-      });
-      const data = await response.json();
-      console.log(data); // Sunucudan gelen yanıtı konsola yazdırabilirsiniz
-      // İşlemlere devam etmek için sunucudan gelen yanıtı burada kullanabilirsiniz
+      const data = await signupUser(signupName, signupEmail, signupPassword);
+      alert('Hesabiniz olustruldu!')
+      console.log(data);
     } catch (error) {
       console.error("There was an error!", error);
     }
